@@ -1,8 +1,23 @@
 #!/usr/bin/env node
 
 /**
- * This requires the sax-js and jsDom packages to Node. Install using "npm install sax" &
- * "npm install jsom".
+ * This requires the sax-js and jsDom packages to Node. Install with following
+ * commands, in same directory as script:
+ *      npm install sax@0.2.3
+ *      npm install jsdom@0.2.3
+ * ----------------------------------------------------------------
+ * SUPPLEMENTAL NOTES 20121114 JF:
+ *  Had to install Node.js (which was simple)
+ *  Then I couldn't get jsdom@0.2.3 to install successfully in local ./node-modules.
+ *  Instead, I installed latest versions (sax, jsdom) and manually installed node-gyp
+ *  before jsdom (although not sure this was necessary), and could only get things working
+ *  by installing everything globally (-g) via sudo. Still got a warning message
+ *  on installing jsdom about optional module contextify not installing correctly,
+ *  but contextify doesn't seem to be necessary for this app.
+ *  So that Node finds the globally installed modules, had to edit ~/.profile to add this line 
+ *    export NODE_PATH="/usr/local/lib/node_modules"
+ *  Then I successfully converted XML to JSON via:
+ *    node oamXml2Json.js sampleOamXml/Heading_oam.xml
  */
 
 var fs = require('fs'),
@@ -35,7 +50,7 @@ function printHelp() {
 }
 
 function convert(filepath, filedata) {
-    var doc = new jsdom.dom.level1.core.Document();
+    var doc = new (jsdom.dom.level3.core.Document)();
     var current = doc;
     var totalElements = 0;
 // NOTE: Creating the parser in strict-mode (first parameter set to 'true') results in many error
@@ -126,7 +141,7 @@ function convertToJson( dom, url ) {
                 }
             }
         }
-        return text;
+        return text.trim();
     }
 
     function _count( obj ) {

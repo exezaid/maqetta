@@ -17,7 +17,7 @@
    </license>
 
    <plugin
-         id="davinci.core"
+         id="maqetta.core.server"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -25,27 +25,6 @@
 
    <plugin
          id="davinci.html"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="davinci.dojo_1_5"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="davinci.yui_2_6_0"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="davinci.yui_2_6_0"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -66,44 +45,26 @@
          unpack="false"/>
 
    <plugin
-         id="davinci.review"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="javax.activation"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="javax.mail"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-         
-   <plugin
          id="org.eclipse.core.runtime"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+
    <plugin
          id="org.eclipse.equinox.preferences"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+
    <plugin
          id="org.eclipse.core.contenttype"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+
    <plugin
          id="org.eclipse.equinox.app"
          download-size="0"
@@ -111,5 +72,24 @@
          version="0.0.0"
          unpack="false"/>
 
+   <plugin
+         id="davinci.dojo_1_8"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="maqetta.core.client"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="maqetta.core.server.standalone"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>
